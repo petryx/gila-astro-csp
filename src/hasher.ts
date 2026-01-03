@@ -1,5 +1,5 @@
 import { createHash } from 'node:crypto';
-import type { InlineElement, HashResult } from './types';
+import type { InlineElement, HashResult } from './types.js';
 
 export function calculateHash(content: string): string {
   const hash = createHash('sha256')

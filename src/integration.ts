@@ -1,10 +1,10 @@
 import type { AstroIntegration } from 'astro';
 import { readFileSync, writeFileSync, readdirSync, statSync, mkdirSync, existsSync } from 'node:fs';
 import { join, dirname } from 'node:path';
-import type { GilaCSPOptions, CSPDirectives } from './types';
-import { processHtml } from './injector';
-import { applyPresets } from './presets';
-import { generateNginxConfig } from './nginx';
+import type { GilaCSPOptions, CSPDirectives } from './types.js';
+import { processHtml } from './injector.js';
+import { applyPresets } from './presets.js';
+import { generateNginxConfig } from './nginx.js';
 
 export interface DirectivesInput {
   scriptHashes: string[];

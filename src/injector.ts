@@ -1,6 +1,6 @@
-import type { HashResult, ProcessedHashes } from './types';
-import { extractInlineElements } from './scanner';
-import { calculateHash, hashInlineElements } from './hasher';
+import type { HashResult, ProcessedHashes } from './types.js';
+import { extractInlineElements } from './scanner.js';
+import { calculateHash, hashInlineElements } from './hasher.js';
 
 export interface ProcessResult {
   html: string;

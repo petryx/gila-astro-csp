@@ -1,4 +1,4 @@
-import type { ScanResult, InlineElement } from './types';
+import type { ScanResult, InlineElement } from './types.js';
 
 const INLINE_SCRIPT_REGEX = /<script(?![^>]*\bsrc=)[^>]*>([\s\S]*?)<\/script>/gi;
 const EXTERNAL_SCRIPT_REGEX = /<script[^>]*\bsrc=["']([^"']+)["'][^>]*>/gi;

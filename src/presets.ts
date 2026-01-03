@@ -1,4 +1,4 @@
-import type { PresetName, Preset } from './types';
+import type { PresetName, Preset } from './types.js';
 
 export interface PresetResources {
   scripts: string[];

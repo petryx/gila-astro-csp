@@ -1,4 +1,4 @@
-import type { CSPDirectives, NginxOptions } from './types';
+import type { CSPDirectives, NginxOptions } from './types.js';
 
 const DEFAULT_OPTIONS: Required<NginxOptions> = {
   outputPath: './dist/_csp/nginx.conf',
