@@ -1,0 +1,55 @@
+{
+  "name": "gila-astro-csp",
+  "version": "0.1.0",
+  "description": "Astro 5+ integration for SRI (Subresource Integrity) and CSP (Content-Security-Policy) with nginx support",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "test": "vitest",
+    "test:run": "vitest run",
+    "test:coverage": "vitest run --coverage",
+    "lint": "eslint src --ext .ts",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "astro",
+    "astro-integration",
+    "csp",
+    "content-security-policy",
+    "sri",
+    "subresource-integrity",
+    "security",
+    "nginx"
+  ],
+  "author": "Gila Security <contato@gilasecurity.com> (https://gilasecurity.com)",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/petryx/gila-astro-csp.git"
+  },
+  "bugs": {
+    "url": "https://github.com/petryx/gila-astro-csp/issues"
+  },
+  "homepage": "https://gilasecurity.com",
+  "peerDependencies": {
+    "astro": "^5.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "astro": "^5.16.0",
+    "typescript": "^5.7.0",
+    "vitest": "^2.1.0"
+  }
+}
