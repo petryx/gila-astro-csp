@@ -23,6 +23,10 @@ export function generateCSPHeader(directives: Partial<CSPDirectives>): string {
   for (const directive of directiveOrder) {
     const values = directives[directive];
     if (values && values.length > 0) {
+      console.log(`[nginx.ts] ${directive}: ${values.length} values`);
+      if (directive === 'script-src') {
+        console.log(`[nginx.ts] script-src sample:`, values.slice(0, 3), '...', values.slice(-3));
+      }
       parts.push(`${directive} ${values.join(' ')}`);
     }
   }
