@@ -88,15 +88,20 @@ export function buildDirectives(
   }
 
   if (options?.directives) {
+    console.log('[gila-astro-csp] Merging custom directives:', Object.keys(options.directives));
     for (const [key, values] of Object.entries(options.directives)) {
       const directive = key as keyof CSPDirectives;
       if (values) {
+        console.log(`[gila-astro-csp] Adding ${values.length} values to ${directive}`);
         directives[directive] = [
           ...(directives[directive] || []),
           ...values.filter(v => !directives[directive]?.includes(v))
         ];
+        console.log(`[gila-astro-csp] ${directive} now has ${directives[directive]?.length} values`);
       }
     }
+  } else {
+    console.log('[gila-astro-csp] No custom directives provided');
   }
 
   return directives;

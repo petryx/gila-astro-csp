@@ -1,6 +1,6 @@
 {
   "name": "gila-astro-csp",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Astro 5+ integration for SRI (Subresource Integrity) and CSP (Content-Security-Policy) with nginx support",
   "type": "module",
   "main": "./dist/index.js",
