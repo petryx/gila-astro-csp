@@ -15,6 +15,7 @@ export function generateCSPHeader(directives: Partial<CSPDirectives>): string {
     'img-src',
     'font-src',
     'connect-src',
+    'frame-src',
     'frame-ancestors',
     'form-action',
     'base-uri'
